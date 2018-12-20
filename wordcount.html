@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name=viewport content="initial-scale=1">
+	<title>Wordcount</title>
+	<link rel="stylesheet" type="text/css" href="wordcount.css">
+</head>
+<body>
+	<section>
+		<nav class="nav">
+			<p class="logo">Wordcount</p>
+		</nav>
+
+		<div class="tab-labels">
+			<span id="input" class="tab-label active" onclick="setTab('input')">
+				Input
+			</span>
+			<span id="results" class="tab-label" onclick="setTab('results')">
+				Results
+			</span>
+			<span id="chart" class="tab-label" onclick="setTab('chart')">
+				Chart
+			</span>
+		</div>
+
+		<div class="tabs">
+			<div id="tab-input" class="tab active">
+				<p class="instruction">Write a phrase and press 'Submit' to count words.</p>
+				<textarea
+					id="wordInput"
+					class="textarea"
+					placeholder="Write a phrase and press 'Submit' to divide and count.">How much would could a wood chuck chuck if a wood chuck could chuck wood?</textarea>
+				<button class="button" onclick="handleSubmit()">Submit</button>
+			</div>
+
+			<div id="tab-results" class="tab">
+				<div id="wordList" class="word-list"></div>
+			</div>
+
+			<div id="tab-chart" class="tab">
+				<div class="pie-chart">
+					<div id="pie-chart"></div>
+					<div id="tooltip" class="tooltip">Mouse over to view</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.15.0/lodash.min.js"></script>
+	<script type="text/javascript" src="wordcount.js"></script>
+</body>
+</html>

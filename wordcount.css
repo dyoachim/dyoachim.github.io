@@ -1,0 +1,158 @@
+body {
+	background-color: #212121;
+	box-sizing: border-box;
+	color: #FFF;
+	margin: 0;
+}
+
+.nav {
+	align-items: center;
+	background-color: #5384D0;
+	display: flex;
+	height: 50px;
+}
+
+.logo {
+	font-family: 'Apple Chancery', cursive;
+	font-size: 32px;
+	font-weight: bold;
+	padding: 0 20px;
+}
+
+.instruction {
+	margin: 0;
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 20px;
+	padding: 10px 20px 0;
+}
+
+.textarea {
+	font-size: 24px;
+	background-color: #696969;
+	border: 10px solid #424242;
+	box-sizing: border-box;
+	color: #FFF;
+	height: calc(100% - 110px);
+	padding: 20px;
+	resize: none;
+	width: 100%;
+}
+.textarea::placeholder {
+	color: rgba(255,255,255,0.5);
+}
+
+.tab-labels {
+	align-items: center;
+	background-color: #212121;
+	display: flex;
+	height: 50px;
+}
+.tab-label {
+	color: rgba(255, 255, 255, 0.5);
+	flex: 1;
+	font-size: 28px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+.tab-label.active {
+	background-color: #424242;
+	color: #FFF;
+}
+
+
+.tab {
+	background-color: #424242;
+	bottom: 0;
+	display: none;
+	overflow: scroll;
+	position: absolute;
+	top: 100px;
+	width: 100%;
+}
+
+.tab.active {
+	display: block;
+}
+
+.button {
+	background-color: #4CC2DA;
+	display: block;
+	font-size: 28px;
+	height: 50px;
+	margin: 0 auto;
+	max-width: 320px;
+	width: 100%;
+}
+
+.word-header {
+	border-bottom: 2px solid #999;
+	font-weight: bold;
+	height: 50px;
+	line-height: 50px;
+}
+.word-list {
+	font-size: 24px;
+	height: calc(100% - 40px);
+	margin: 10px auto 0;
+	padding-bottom: 20px;
+	overflow: scroll;
+}
+.word-list > div {
+	display: flex;
+}
+.word-list > div:nth-child(even) {
+	background-color: #303030;
+}
+.word-list > div > span {
+	flex: 1;
+	height: 100%;
+	margin: 5px 10px;
+}
+.word-list > div > span:nth-child(n+2) {
+	text-align: right;
+}
+.word-list > div > span:first-child {
+	margin-left: 20px;
+}
+.word-list > div > span:last-child {
+	margin-right: 20px;
+}
+
+.pie-chart {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+}
+.tooltip {
+	color: #FFF;
+	font-size: 24px;
+	height: 30px;
+	padding: 5px 10px;
+}
+
+@media only screen and (min-width: 768px) {
+	.tab-labels {
+		display: none;
+	}
+
+	.tabs {
+		display: flex;
+	}
+	.tab {
+		display: inline-block;
+		flex: 1;
+		height: calc(100vh - 50px);
+		position: static;
+	}
+
+	.textarea {
+		height: calc(100% - 124px);
+	}
+
+	.word-list {
+		border-right: 2px solid #999;
+	}
+}
